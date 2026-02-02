@@ -15,6 +15,11 @@ const PRODUCT_COLORS = {
     rgb: '158, 119, 237',
     class: 'product-solodit'
   },
+  battlechain: {
+    primary: '#155EEF',
+    rgb: '21, 94, 239',
+    class: 'product-battlechain'
+  },
   profiles: {
     primary: '#155EEF',
     rgb: '21, 94, 239',
@@ -37,6 +42,7 @@ function applyProductTheme() {
   if (path.includes('/codehawks')) currentProduct = PRODUCT_COLORS.codehawks;
   else if (path.includes('/updraft')) currentProduct = PRODUCT_COLORS.updraft;
   else if (path.includes('/solodit')) currentProduct = PRODUCT_COLORS.solodit;
+  else if (path.includes('/battlechain')) currentProduct = PRODUCT_COLORS.battlechain;
   else if (path.includes('/profiles')) currentProduct = PRODUCT_COLORS.profiles;
 
   console.log('[Cyfrin Theme] Current product:', currentProduct ? currentProduct.class : 'none');
@@ -135,41 +141,34 @@ const PRODUCT_LOGOS = {
   'CodeHawks': '/images/product-logos/codehawks.svg',
   'Updraft': '/images/product-logos/updraft.svg',
   'Solodit': '/images/product-logos/solodit.svg',
+  'Battlechain': '/images/product-logos/battlechain.svg',
   'Profiles': '/images/product-logos/cyfrin.svg'
 };
 
-// Replace Font Awesome icons with custom logos (only for collapsible groups, not anchor links)
+// Replace Font Awesome icons with custom logos (only for collapsible group buttons in sidebar)
 function replaceProductLogos() {
-  console.log('[Cyfrin Theme] Replacing product logos');
+  console.log('[Cyfrin Theme] Replacing product logos in sidebar');
 
-  // Find all BUTTONS (collapsible groups) - exclude links (anchor links)
-  const allButtons = document.querySelectorAll('button');
+  // Target only buttons with aria-expanded (collapsible group headers)
+  const collapsibleButtons = document.querySelectorAll('button[aria-expanded]');
 
-  allButtons.forEach(element => {
-    const textContent = element.textContent.trim();
+  collapsibleButtons.forEach(button => {
+    const textContent = button.textContent.trim();
 
-    // Check if this element contains a product name
+    // Check each product name
     Object.keys(PRODUCT_LOGOS).forEach(productName => {
-      if (textContent === productName || textContent.startsWith(productName)) {
-        // Skip if this is an external link anchor (check parent)
-        const isAnchorLink = element.closest('.nav-anchor') ||
-                            element.querySelector('.nav-anchor') ||
-                            (element.href && element.href.includes('cyfrin.io'));
+      // Check if this button is for this product
+      if (textContent.includes(productName) && !button.dataset.logoReplaced) {
+        // Find the SVG icon
+        const svgIcon = button.querySelector('svg');
 
-        if (isAnchorLink) {
-          return; // Skip anchor links, keep Font Awesome icons
-        }
+        if (svgIcon) {
+          console.log(`[Cyfrin Theme] Adding logo to ${productName} dropdown`);
 
-        // Find the SVG icon (Font Awesome)
-        const svgIcon = element.querySelector('svg');
-
-        if (svgIcon && !element.dataset.logoReplaced) {
-          console.log(`[Cyfrin Theme] Replacing icon for ${productName}`);
-
-          // Hide the Font Awesome icon
+          // Hide Font Awesome icon
           svgIcon.style.display = 'none';
 
-          // Create custom logo image
+          // Create brand logo
           const logoImg = document.createElement('img');
           logoImg.src = PRODUCT_LOGOS[productName];
           logoImg.alt = productName;
@@ -178,14 +177,67 @@ function replaceProductLogos() {
           logoImg.style.marginRight = '8px';
           logoImg.style.flexShrink = '0';
 
-          // Insert logo before the SVG
+          // Insert before SVG
           svgIcon.parentNode.insertBefore(logoImg, svgIcon);
 
-          // Mark as replaced to avoid duplicates
-          element.dataset.logoReplaced = 'true';
+          // Mark as done
+          button.dataset.logoReplaced = 'true';
         }
       }
     });
+  });
+}
+
+// Replace icons on landing page cards
+function replaceLandingPageCardLogos() {
+  console.log('[Cyfrin Theme] Replacing landing page card icons');
+
+  // Simple direct approach - find all links, check text content
+  const allLinks = document.querySelectorAll('a');
+
+  allLinks.forEach(link => {
+    // Skip if already done
+    if (link.dataset.cardIconReplaced) return;
+
+    // Check if this link contains a product title and has an SVG
+    const linkText = link.textContent;
+    const svgs = link.querySelectorAll('svg');
+
+    if (svgs.length === 0) return;
+
+    let logoToUse = null;
+    let productName = null;
+
+    // Check which product this is
+    if (linkText.includes('CodeHawks') && linkText.includes('Competitive Security Audits')) {
+      logoToUse = '/images/product-logos/codehawks.svg';
+      productName = 'CodeHawks';
+    } else if (linkText.includes('Updraft') && linkText.includes('Web3 Education')) {
+      logoToUse = '/images/product-logos/updraft.svg';
+      productName = 'Updraft';
+    } else if (linkText.includes('Solodit') && linkText.includes('Vulnerability Research')) {
+      logoToUse = '/images/product-logos/solodit.svg';
+      productName = 'Solodit';
+    } else if (linkText.includes('Cyfrin Profiles') && linkText.includes('Unified Accounts')) {
+      logoToUse = '/images/product-logos/cyfrin.svg';
+      productName = 'Cyfrin Profiles';
+    }
+
+    if (logoToUse && svgs[0]) {
+      console.log(`[Cyfrin Theme] ✓ Replacing card icon for ${productName}`);
+
+      // Create logo image
+      const logoImg = document.createElement('img');
+      logoImg.src = logoToUse;
+      logoImg.alt = productName;
+      logoImg.style.width = '48px';
+      logoImg.style.height = '48px';
+      logoImg.style.objectFit = 'contain';
+
+      // Replace the first SVG
+      svgs[0].parentNode.replaceChild(logoImg, svgs[0]);
+      link.dataset.cardIconReplaced = 'true';
+    }
   });
 }
 
@@ -193,10 +245,17 @@ function replaceProductLogos() {
 console.log('[Cyfrin Theme] Script loaded!');
 applyProductTheme();
 replaceProductLogos();
+replaceLandingPageCardLogos();
 
-// Replace logos after short delays to catch dynamic content
+// Replace logos after delays to catch dynamic content
 setTimeout(replaceProductLogos, 100);
 setTimeout(replaceProductLogos, 500);
+setTimeout(replaceProductLogos, 1000);
+setTimeout(replaceLandingPageCardLogos, 100);
+setTimeout(replaceLandingPageCardLogos, 500);
+setTimeout(replaceLandingPageCardLogos, 1000);
+setTimeout(replaceLandingPageCardLogos, 2000);
+setTimeout(replaceLandingPageCardLogos, 3000);
 
 // Re-run on navigation changes (for SPA routing)
 if (window.navigation) {
@@ -204,6 +263,7 @@ if (window.navigation) {
     setTimeout(() => {
       applyProductTheme();
       replaceProductLogos();
+      replaceLandingPageCardLogos();
     }, 100);
   });
 }

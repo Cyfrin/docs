@@ -3,25 +3,36 @@ title: "Cyfrin Documentation"
 description: "Welcome to the Cyfrin ecosystem - Security audits, Web3 education, and vulnerability research"
 ---
 
-<div className="hero-gradient fade-in" style={{ padding: '3rem 0', borderRadius: '16px', marginBottom: '2rem', textAlign: 'center' }}>
-  <div className="float-animation" style={{
-    width: '300px',
-    height: '80px',
-    margin: '0 auto 2rem',
-    backgroundImage: 'url(https://raw.githubusercontent.com/Cyfrin/brand-assets/main/media/logos/cyfrin/light/Cyfrin%20Logo%20Full%20-%20Light.svg)',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  }} className="block dark:hidden" />
-  <div className="float-animation" style={{
-    width: '300px',
-    height: '80px',
-    margin: '0 auto 2rem',
-    backgroundImage: 'url(https://raw.githubusercontent.com/Cyfrin/brand-assets/main/media/logos/cyfrin/dark/CyfrinLogoFull-Dark.svg)',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  }} className="hidden dark:block" />
+<div className="hero-container">
+  <div className="hero-background">
+    <div className="hero-grid"></div>
+    <div className="hero-glow-1"></div>
+    <div className="hero-glow-2"></div>
+    <div className="hero-particles">
+      <div className="particle"></div>
+      <div className="particle"></div>
+      <div className="particle"></div>
+      <div className="particle"></div>
+      <div className="particle"></div>
+    </div>
+  </div>
+  <div className="hero-content">
+    <div className="hero-logo">
+      <img
+        src="https://raw.githubusercontent.com/Cyfrin/brand-assets/main/media/logos/cyfrin/light/Cyfrin%20Logo%20Full%20-%20Light.svg"
+        alt="Cyfrin"
+        className="block dark:hidden"
+      />
+      <img
+        src="https://raw.githubusercontent.com/Cyfrin/brand-assets/main/media/logos/cyfrin/dark/CyfrinLogoFull-Dark.svg"
+        alt="Cyfrin"
+        className="hidden dark:block"
+      />
+    </div>
+    <p className="hero-tagline">
+      Powering the future of smart contract security
+    </p>
+  </div>
 </div>
 
 # Welcome to Cyfrin
@@ -38,6 +49,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     **Competitive Security Audits**
 
     Compete to find vulnerabilities in smart contracts. Earn rewards, build your reputation, and protect Web3.
+
   </Card>
 
   <Card
@@ -49,6 +61,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     **Web3 Education Platform**
 
     Learn smart contract development and security. Get certified and advance your career in blockchain.
+
   </Card>
 
   <Card
@@ -60,6 +73,19 @@ The complete platform for Web3 security researchers, developers, and learners. F
     **Vulnerability Research**
 
     Navigate 20,000+ security findings. Research, learn, and contribute to the community knowledge base.
+
+  </Card>
+
+  <Card
+    title="Battlechain"
+    icon="link"
+    href="/battlechain/overview"
+    color="#155EEF"
+  >
+    **Security-First Blockchain**
+
+    Coming soon - Revolutionary blockchain infrastructure for decentralized security and audit coordination.
+
   </Card>
 
   <Card
@@ -70,6 +96,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     **Unified Accounts**
 
     One profile across the entire ecosystem. Manage your settings, wallets, and credentials in one place.
+
   </Card>
 </CardGroup>
 
@@ -80,18 +107,19 @@ The complete platform for Web3 security researchers, developers, and learners. F
     Sign up for a free Cyfrin account to access all platforms
 
     [Create account →](https://profiles.cyfrin.io)
+
   </Step>
 
-  <Step title="Choose Your Path">
-    - **Security Researcher?** Join CodeHawks competitions
-    - **Learning Web3?** Start with Updraft courses
-    - **Researching vulnerabilities?** Explore Solodit
-  </Step>
+<Step title="Choose Your Path">
+  - **Security Researcher?** Join CodeHawks competitions - **Learning Web3?**
+  Start with Updraft courses - **Researching vulnerabilities?** Explore Solodit
+</Step>
 
   <Step title="Join the Community">
     Connect with 10,000+ developers and security researchers on Discord
 
     [Join Discord →](https://discord.gg/cyfrin)
+
   </Step>
 </Steps>
 
@@ -102,21 +130,33 @@ The complete platform for Web3 security researchers, developers, and learners. F
     Start competing in CodeHawks
   </Card>
 
-  <Card title="Submit Findings" icon="bug" href="/codehawks/submit-a-finding">
-    Learn how to report vulnerabilities
-  </Card>
+<Card title="Submit Findings" icon="bug" href="/codehawks/submit-a-finding">
+  Learn how to report vulnerabilities
+</Card>
 
-  <Card title="Get Certified" icon="certificate" href="/updraft/how-to-purchase-a-cyfrin-certification">
-    Earn a professional certification
-  </Card>
+<Card
+  title="Get Certified"
+  icon="certificate"
+  href="/updraft/how-to-purchase-a-cyfrin-certification"
+>
+  Earn a professional certification
+</Card>
 
-  <Card title="First Flights" icon="plane-departure" href="/codehawks/what-is-a-codehawks-first-flight">
-    Beginner-friendly competitions
-  </Card>
+<Card
+  title="First Flights"
+  icon="plane-departure"
+  href="/codehawks/what-is-a-codehawks-first-flight"
+>
+  Beginner-friendly competitions
+</Card>
 
-  <Card title="Search Vulnerabilities" icon="magnifying-glass-chart" href="/solodit/search-for-a-finding">
-    Explore the vulnerability database
-  </Card>
+<Card
+  title="Search Vulnerabilities"
+  icon="magnifying-glass-chart"
+  href="/solodit/search-for-a-finding"
+>
+  Explore the vulnerability database
+</Card>
 
   <Card title="2FA Setup" icon="shield-check" href="/profiles/add-two-factors-authentication-2fa">
     Secure your account
@@ -139,6 +179,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     - Transparent judging and appeals process
 
     [Explore CodeHawks →](/codehawks/overview)
+
   </Accordion>
 
   <Accordion title="🎓 Updraft - Web3 Education" icon="graduation-cap">
@@ -152,6 +193,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     - Industry-recognized credentials
 
     [Start Learning →](/updraft/overview)
+
   </Accordion>
 
   <Accordion title="📚 Solodit - Security Research" icon="magnifying-glass">
@@ -165,6 +207,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     - Community-driven ratings
 
     [Browse Solodit →](/solodit/overview)
+
   </Accordion>
 
   <Accordion title="🛡️ Cyfrin Profiles - Unified Identity" icon="user">
@@ -178,6 +221,7 @@ The complete platform for Web3 security researchers, developers, and learners. F
     - Customizable settings
 
     [Manage Profile →](/profiles/overview)
+
   </Accordion>
 </AccordionGroup>
 
@@ -186,13 +230,12 @@ The complete platform for Web3 security researchers, developers, and learners. F
 <Card title="Need Help?" icon="life-ring" href="https://discord.gg/cyfrin">
   Join our Discord community for support, discussions, and updates.
 
-  **10,000+ developers and security researchers are waiting to help.**
+**10,000+ developers and security researchers are waiting to help.**
+
 </Card>
 
-## Cyfrin Blockchain
-
-Cyfrin is building the future of decentralized security infrastructure. Stay tuned for updates on our upcoming blockchain designed specifically for security research and audit coordination.
 
 <Note>
-  These docs are open source. Found an issue? [Contribute on GitHub →](https://github.com/Cyfrin)
+  These docs are open source. Found an issue? [Contribute on GitHub
+  →](https://github.com/Cyfrin)
 </Note>

@@ -233,6 +233,14 @@
                 ]
               }
             ]
+              },
+              {
+                "group": "Battlechain",
+                "icon": "link",
+                "expanded": false,
+                "pages": [
+                  "battlechain/overview"
+                ]
               }
             ]
           }
