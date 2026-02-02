@@ -34,20 +34,20 @@
     "tabs": [
       {
         "tab": "Documentation",
-        "groups": [
+        "dropdowns": [
           {
-            "group": "Getting Started",
+            "dropdown": "Welcome",
+            "icon": "/images/product-logos/cyfrin.svg",
             "pages": [
               "index"
             ]
           },
           {
-            "group": "Products",
+            "dropdown": "Profiles",
+            "icon": "/images/product-logos/cyfrin.svg",
             "pages": [
-              {
-                "group": "Profiles",
-                "icon": "user-shield",
-                "expanded": false,
+          {
+            "group": "Cyfrin Profiles",
             "pages": [
               "profiles/overview",
               {
@@ -79,11 +79,15 @@
                 ]
               }
             ]
-              },
-              {
-                "group": "CodeHawks",
-                "icon": "shield-halved",
-                "expanded": false,
+          }
+        ]
+          },
+          {
+            "dropdown": "CodeHawks",
+            "icon": "/images/product-logos/codehawks.svg",
+            "pages": [
+          {
+            "group": "CodeHawks",
             "pages": [
               "codehawks/overview",
               {
@@ -149,11 +153,15 @@
                 ]
               }
             ]
-              },
-              {
-                "group": "Updraft",
-                "icon": "graduation-cap",
-                "expanded": false,
+          }
+        ]
+          },
+          {
+            "dropdown": "Updraft",
+            "icon": "/images/product-logos/updraft.svg",
+            "pages": [
+          {
+            "group": "Updraft",
             "pages": [
               "updraft/overview",
               {
@@ -199,11 +207,15 @@
                 ]
               }
             ]
-              },
-              {
-                "group": "Solodit",
-                "icon": "magnifying-glass",
-                "expanded": false,
+          }
+        ]
+          },
+          {
+            "dropdown": "Solodit",
+            "icon": "/images/product-logos/solodit.svg",
+            "pages": [
+          {
+            "group": "Solodit",
             "pages": [
               "solodit/overview",
               {
@@ -233,15 +245,14 @@
                 ]
               }
             ]
-              },
-              {
-                "group": "Battlechain",
-                "icon": "link",
-                "expanded": false,
-                "pages": [
-                  "battlechain/overview"
-                ]
-              }
+          }
+        ]
+          },
+          {
+            "dropdown": "Battlechain",
+            "icon": "/images/product-logos/battlechain.svg",
+            "pages": [
+              "battlechain/overview"
             ]
           }
         ]
@@ -294,5 +305,5 @@
       "theme": "github-dark-dimmed"
     }
   },
-  "css": ["/styles.css", "/product-themes.css", "/product-logos.css"]
+  "css": ["/styles.css", "/product-themes.css"]
 }
