@@ -1,68 +1,239 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Cyfrin Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#155EEF",
+    "light": "#2970FF",
+    "dark": "#004EEB"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://cyfrin.io"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Community",
+        "href": "https://discord.gg/cyfrin"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/Cyfrin"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Sign In",
+      "href": "https://profiles.cyfrin.io"
+    }
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Products",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              {
+                "group": "Profiles",
+                "icon": "user-shield",
+                "expanded": false,
+            "pages": [
+              "profiles/overview",
+              {
+                "group": "Account Setup",
+                "pages": [
+                  "profiles/what-is-a-cyfrin-profile",
+                  "profiles/create-a-cyfrin-profile",
+                  "profiles/add-and-edit-your-profile-info",
+                  "profiles/your-profile-picture-and-cover-photo"
+                ]
+              },
+              {
+                "group": "Security",
+                "pages": [
+                  "profiles/change-your-password",
+                  "profiles/fix-a-login-problem",
+                  "profiles/add-two-factors-authentication-2fa"
+                ]
+              },
+              {
+                "group": "Settings",
+                "pages": [
+                  "profiles/adjust-your-profile-settings",
+                  "profiles/connect-third-party-platforms",
+                  "profiles/managing-wallet-and-payment-wallet",
+                  "profiles/change-the-platforms-appearance",
+                  "profiles/opt-in-to-beta-updates",
+                  "profiles/deactivating-or-deleting-your-account"
+                ]
+              }
             ]
-          },
-          {
-            "group": "Writing content",
+              },
+              {
+                "group": "CodeHawks",
+                "icon": "shield-halved",
+                "expanded": false,
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "codehawks/overview",
+              {
+                "group": "Cyfrin Eagles",
+                "pages": [
+                  "codehawks/what-are-cyfrin-eagles",
+                  "codehawks/how-to-become-an-eagle",
+                  "codehawks/eagle-payments",
+                  "codehawks/payout-scenarios"
+                ]
+              },
+              {
+                "group": "Competitions",
+                "pages": [
+                  "codehawks/what-is-a-competitive-audit",
+                  "codehawks/join-a-codehawks-contest",
+                  "codehawks/kick-off-period",
+                  "codehawks/private-competition",
+                  "codehawks/view-competition-results"
+                ]
+              },
+              {
+                "group": "Findings & Submissions",
+                "pages": [
+                  "codehawks/what-is-a-finding",
+                  "codehawks/submit-a-finding",
+                  "codehawks/findings-severity",
+                  "codehawks/findings-validity",
+                  "codehawks/write-a-proof-of-concept-poc",
+                  "codehawks/view-private-competitions-findings"
+                ]
+              },
+              {
+                "group": "Judging & Appeals",
+                "pages": [
+                  "codehawks/judging-process",
+                  "codehawks/what-are-appeals",
+                  "codehawks/appeals-eligibility-criteria",
+                  "codehawks/how-to-appeal"
+                ]
+              },
+              {
+                "group": "Rewards & Payouts",
+                "pages": [
+                  "codehawks/how-payouts-work",
+                  "codehawks/kyc-rewards",
+                  "codehawks/invoice-your-rewards"
+                ]
+              },
+              {
+                "group": "First Flights",
+                "pages": [
+                  "codehawks/what-is-a-codehawks-first-flight",
+                  "codehawks/join-a-codehawks-first-flight",
+                  "codehawks/submit-a-first-flight",
+                  "codehawks/ai-first-flights"
+                ]
+              },
+              {
+                "group": "For Sponsors",
+                "pages": [
+                  "codehawks/the-auditing-process"
+                ]
+              }
             ]
-          },
-          {
-            "group": "AI tools",
+              },
+              {
+                "group": "Updraft",
+                "icon": "graduation-cap",
+                "expanded": false,
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "updraft/overview",
+              {
+                "group": "Certifications",
+                "pages": [
+                  "updraft/what-is-a-cyfrin-updraft-professional-certification",
+                  "updraft/what-is-a-cyfrin-updraft-certificate-of-completion",
+                  "updraft/professional-certifications-vs-certificates-of-completion",
+                  "updraft/how-to-purchase-a-cyfrin-certification",
+                  "updraft/what-is-an-exam-voucher",
+                  "updraft/how-to-gift-a-certification",
+                  "updraft/how-to-redeem-a-certification-coupon",
+                  "updraft/how-to-retake-a-certification-exam",
+                  "updraft/what-happens-if-i-purchase-a-retake-and-then-pass",
+                  "updraft/certification-policies"
+                ]
+              },
+              {
+                "group": "Study Materials",
+                "pages": [
+                  "updraft/what-is-a-cyfrin-updraft-certification-study-guide",
+                  "updraft/how-to-download-the-cyfrin-updraft-study-guide",
+                  "updraft/how-to-redeem-the-sscd-certification-code-rocketpool",
+                  "updraft/how-to-redeem-the-sscd-certification-code-gmx"
+                ]
+              },
+              {
+                "group": "Sharing & Downloads",
+                "pages": [
+                  "updraft/how-to-share-your-cyfrin-certification",
+                  "updraft/how-do-i-download-a-pdf-copy-of-my-certification",
+                  "updraft/share-a-completed-course"
+                ]
+              },
+              {
+                "group": "Courses & Learning",
+                "pages": [
+                  "updraft/find-courses-to-take",
+                  "updraft/change-video-settings",
+                  "updraft/fix-a-problem-playing-videos",
+                  "updraft/complete-a-course-quiz",
+                  "updraft/reset-a-quiz"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
+              },
+              {
+                "group": "Solodit",
+                "icon": "magnifying-glass",
+                "expanded": false,
             "pages": [
-              "api-reference/introduction"
+              "solodit/overview",
+              {
+                "group": "Vulnerabilities",
+                "pages": [
+                  "solodit/navigate-vulnerabilities",
+                  "solodit/search-for-a-finding",
+                  "solodit/rate-a-finding",
+                  "solodit/add-new-finding",
+                  "solodit/tags-list-and-descriptions"
+                ]
+              },
+              {
+                "group": "Bug Bounties",
+                "pages": [
+                  "solodit/what-is-a-bug-bounty-program",
+                  "solodit/search-for-a-bounty",
+                  "solodit/rate-a-bounty"
+                ]
+              },
+              {
+                "group": "Tools",
+                "pages": [
+                  "solodit/managing-your-notes",
+                  "solodit/formatting-your-notes",
+                  "solodit/aggregated-leaderboard"
+                ]
+              }
             ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              }
             ]
           }
         ]
@@ -71,52 +242,49 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "CodeHawks",
+          "href": "https://codehawks.cyfrin.io",
+          "icon": "shield-halved"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Updraft",
+          "href": "https://updraft.cyfrin.io",
+          "icon": "graduation-cap"
+        },
+        {
+          "anchor": "Solodit",
+          "href": "https://solodit.cyfrin.io",
+          "icon": "magnifying-glass"
+        },
+        {
+          "anchor": "Discord Community",
+          "href": "https://discord.gg/cyfrin",
+          "icon": "discord"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "claude",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/cyfrinaudits",
+      "github": "https://github.com/Cyfrin",
+      "discord": "https://discord.gg/cyfrin",
+      "linkedin": "https://linkedin.com/company/cyfrin"
     }
-  }
+  },
+  "styling": {
+    "codeblocks": {
+      "theme": "github-dark-dimmed"
+    }
+  },
+  "css": ["/styles.css", "/product-themes.css", "/product-logos.css"]
 }

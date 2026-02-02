@@ -1,0 +1,192 @@
+/* Product-specific wrapper styling that definitely works */
+
+/* ========================================
+   NAVIGATION HIGHLIGHTS PER PRODUCT
+   ======================================== */
+
+/* CodeHawks Navigation - Orange */
+body.product-codehawks nav a[aria-current="page"],
+body.product-codehawks nav a[data-active="true"],
+body.product-codehawks nav a.active,
+body.product-codehawks aside a[aria-current="page"],
+body.product-codehawks aside a[data-active="true"],
+body.product-codehawks aside a.active,
+body.product-codehawks [data-sidebar] a[aria-current="page"],
+body.product-codehawks [data-sidebar] a[data-active="true"],
+body.product-codehawks [class*="sidebar"] a[aria-current="page"],
+body.product-codehawks [class*="sidebar"] a[data-active="true"],
+body.product-codehawks [class*="nav"] a[aria-current="page"],
+body.product-codehawks [class*="nav"] a[data-active="true"] {
+  background: linear-gradient(90deg, rgba(255, 68, 5, 0.15), transparent) !important;
+  border-left: 3px solid #FF4405 !important;
+  box-shadow: 0 0 15px rgba(255, 68, 5, 0.3) !important;
+  color: #FF4405 !important;
+}
+
+/* Updraft Navigation - Green */
+body.product-updraft nav a[aria-current="page"],
+body.product-updraft nav a[data-active="true"],
+body.product-updraft nav a.active,
+body.product-updraft aside a[aria-current="page"],
+body.product-updraft aside a[data-active="true"],
+body.product-updraft aside a.active,
+body.product-updraft [data-sidebar] a[aria-current="page"],
+body.product-updraft [data-sidebar] a[data-active="true"],
+body.product-updraft [class*="sidebar"] a[aria-current="page"],
+body.product-updraft [class*="sidebar"] a[data-active="true"],
+body.product-updraft [class*="nav"] a[aria-current="page"],
+body.product-updraft [class*="nav"] a[data-active="true"] {
+  background: linear-gradient(90deg, rgba(102, 198, 28, 0.15), transparent) !important;
+  border-left: 3px solid #66C61C !important;
+  box-shadow: 0 0 15px rgba(102, 198, 28, 0.3) !important;
+  color: #66C61C !important;
+}
+
+/* Solodit Navigation - Purple */
+body.product-solodit nav a[aria-current="page"],
+body.product-solodit nav a[data-active="true"],
+body.product-solodit nav a.active,
+body.product-solodit aside a[aria-current="page"],
+body.product-solodit aside a[data-active="true"],
+body.product-solodit aside a.active,
+body.product-solodit [data-sidebar] a[aria-current="page"],
+body.product-solodit [data-sidebar] a[data-active="true"],
+body.product-solodit [class*="sidebar"] a[aria-current="page"],
+body.product-solodit [class*="sidebar"] a[data-active="true"],
+body.product-solodit [class*="nav"] a[aria-current="page"],
+body.product-solodit [class*="nav"] a[data-active="true"] {
+  background: linear-gradient(90deg, rgba(158, 119, 237, 0.15), transparent) !important;
+  border-left: 3px solid #9E77ED !important;
+  box-shadow: 0 0 15px rgba(158, 119, 237, 0.3) !important;
+  color: #9E77ED !important;
+}
+
+/* Profiles Navigation - Blue (default) */
+body.product-profiles nav a[aria-current="page"],
+body.product-profiles nav a[data-active="true"],
+body.product-profiles nav a.active,
+body.product-profiles aside a[aria-current="page"],
+body.product-profiles aside a[data-active="true"],
+body.product-profiles aside a.active,
+body.product-profiles [data-sidebar] a[aria-current="page"],
+body.product-profiles [data-sidebar] a[data-active="true"],
+body.product-profiles [class*="sidebar"] a[aria-current="page"],
+body.product-profiles [class*="sidebar"] a[data-active="true"],
+body.product-profiles [class*="nav"] a[aria-current="page"],
+body.product-profiles [class*="nav"] a[data-active="true"] {
+  background: linear-gradient(90deg, rgba(21, 94, 239, 0.15), transparent) !important;
+  border-left: 3px solid #155EEF !important;
+  box-shadow: 0 0 15px rgba(21, 94, 239, 0.3) !important;
+  color: #155EEF !important;
+}
+
+/* ========================================
+   PAGE TITLES BY SECTION
+   ======================================== */
+
+/* CodeHawks pages - Dark orange titles */
+body.product-codehawks h1,
+body.product-codehawks article h1,
+body.product-codehawks main h1 {
+  color: #BC1B06 !important;
+}
+
+/* Updraft pages - Dark green titles */
+body.product-updraft h1,
+body.product-updraft article h1,
+body.product-updraft main h1 {
+  color: #3B7C0F !important;
+}
+
+/* Solodit pages - Dark purple titles */
+body.product-solodit h1,
+body.product-solodit article h1,
+body.product-solodit main h1 {
+  color: #6941C6 !important;
+}
+
+/* Profiles pages - Blue titles */
+body.product-profiles h1,
+body.product-profiles article h1,
+body.product-profiles main h1 {
+  color: #155EEF !important;
+}
+
+/* ========================================
+   PRODUCT OVERVIEW PAGE STYLING
+   ======================================== */
+
+/* CodeHawks Orange Theme */
+.product-codehawks .card {
+  background: rgba(255, 68, 5, 0.05) !important;
+  border-color: rgba(255, 68, 5, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(255, 68, 5, 0.15) !important;
+}
+
+.product-codehawks .card:hover {
+  background: rgba(255, 68, 5, 0.08) !important;
+  border-color: rgba(255, 68, 5, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(255, 68, 5, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+.product-codehawks h1 {
+  color: #BC1B06 !important;
+}
+
+.product-codehawks h2 {
+  background: linear-gradient(135deg, #FF692E 0%, #FF4405 50%, #E62E05 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Updraft Green Theme */
+.product-updraft .card {
+  background: rgba(102, 198, 28, 0.05) !important;
+  border-color: rgba(102, 198, 28, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(102, 198, 28, 0.15) !important;
+}
+
+.product-updraft .card:hover {
+  background: rgba(102, 198, 28, 0.08) !important;
+  border-color: rgba(102, 198, 28, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(102, 198, 28, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+.product-updraft h1 {
+  color: #3B7C0F !important;
+}
+
+.product-updraft h2 {
+  background: linear-gradient(135deg, #85E13A 0%, #66C61C 50%, #4CA30D 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Solodit Purple Theme */
+.product-solodit .card {
+  background: rgba(158, 119, 237, 0.05) !important;
+  border-color: rgba(158, 119, 237, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(158, 119, 237, 0.15) !important;
+}
+
+.product-solodit .card:hover {
+  background: rgba(158, 119, 237, 0.08) !important;
+  border-color: rgba(158, 119, 237, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(158, 119, 237, 0.25) !important;
+  transform: translateY(-2px) !important;
+}
+
+.product-solodit h1 {
+  color: #6941C6 !important;
+}
+
+.product-solodit h2 {
+  background: linear-gradient(135deg, #B692F6 0%, #9E77ED 50%, #7F56D9 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}

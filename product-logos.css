@@ -1,0 +1,148 @@
+/* Custom product logos in sidebar navigation */
+
+/* Hide Font Awesome icons for product groups */
+body.product-codehawks [class*="sidebar"] button:has(span:contains("CodeHawks")) svg,
+body.product-updraft [class*="sidebar"] button:has(span:contains("Updraft")) svg,
+body.product-solodit [class*="sidebar"] button:has(span:contains("Solodit")) svg,
+body.product-profiles [class*="sidebar"] button:has(span:contains("Profiles")) svg {
+  display: none;
+}
+
+/* Target product group buttons in sidebar by text content */
+/* CodeHawks logo */
+button:has(> span:first-child):has(span:contains("CodeHawks")) svg,
+a:has(> span:first-child):has(span:contains("CodeHawks")) svg {
+  display: none !important;
+}
+
+button:has(> span:first-child):has(span:contains("CodeHawks"))::before,
+a:has(> span:first-child):has(span:contains("CodeHawks"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/codehawks.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Updraft logo */
+button:has(> span:first-child):has(span:contains("Updraft")) svg,
+a:has(> span:first-child):has(span:contains("Updraft")) svg {
+  display: none !important;
+}
+
+button:has(> span:first-child):has(span:contains("Updraft"))::before,
+a:has(> span:first-child):has(span:contains("Updraft"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/updraft.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Solodit logo */
+button:has(> span:first-child):has(span:contains("Solodit")) svg,
+a:has(> span:first-child):has(span:contains("Solodit")) svg {
+  display: none !important;
+}
+
+button:has(> span:first-child):has(span:contains("Solodit"))::before,
+a:has(> span:first-child):has(span:contains("Solodit"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/solodit.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Cyfrin/Profiles logo */
+button:has(> span:first-child):has(span:contains("Profiles")) svg,
+a:has(> span:first-child):has(span:contains("Profiles")) svg {
+  display: none !important;
+}
+
+button:has(> span:first-child):has(span:contains("Profiles"))::before,
+a:has(> span:first-child):has(span:contains("Profiles"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/cyfrin.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* More specific targeting using attribute selectors for the navigation groups */
+[class*="group"] button[class*="flex"]:has(span) svg {
+  display: none !important;
+}
+
+/* Add logos to any element containing these product names in sidebar */
+nav button:has(span):has(:contains("CodeHawks"))::before,
+aside button:has(span):has(:contains("CodeHawks"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/codehawks.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
+
+nav button:has(span):has(:contains("Updraft"))::before,
+aside button:has(span):has(:contains("Updraft"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/updraft.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
+
+nav button:has(span):has(:contains("Solodit"))::before,
+aside button:has(span):has(:contains("Solodit"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/solodit.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
+
+nav button:has(span):has(:contains("Profiles"))::before,
+aside button:has(span):has(:contains("Profiles"))::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/images/product-logos/cyfrin.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}

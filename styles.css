@@ -1,0 +1,458 @@
+/* Cyfrin Docs - Custom Styles - Web3 Glassmorphism Edition */
+
+/* ========================================
+   GLASSMORPHISM EFFECTS
+   ======================================== */
+
+/* Card glassmorphism */
+.card {
+  background: rgba(21, 94, 239, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(21, 94, 239, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(21, 94, 239, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover {
+  background: rgba(21, 94, 239, 0.08) !important;
+  border: 1px solid rgba(21, 94, 239, 0.2) !important;
+  box-shadow: 0 8px 32px 0 rgba(21, 94, 239, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Dark mode glassmorphism enhancement */
+.dark .card {
+  background: rgba(21, 94, 239, 0.08) !important;
+  border: 1px solid rgba(41, 112, 255, 0.2) !important;
+  box-shadow: 0 8px 32px 0 rgba(41, 112, 255, 0.15) !important;
+}
+
+.dark .card:hover {
+  background: rgba(21, 94, 239, 0.12) !important;
+  border: 1px solid rgba(41, 112, 255, 0.3) !important;
+  box-shadow: 0 12px 40px 0 rgba(41, 112, 255, 0.25) !important;
+}
+
+/* ========================================
+   GRADIENT ACCENTS
+   ======================================== */
+
+/* Heading gradients */
+h1 {
+  background: linear-gradient(135deg, #2970FF 0%, #155EEF 50%, #004EEB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark h1 {
+  background: linear-gradient(135deg, #528BFF 0%, #2970FF 50%, #155EEF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* CodeHawks accent */
+.codehawks-accent {
+  background: linear-gradient(135deg, #FF692E 0%, #FF4405 50%, #E62E05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Updraft accent */
+.updraft-accent {
+  background: linear-gradient(135deg, #85E13A 0%, #66C61C 50%, #4CA30D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Solodit accent */
+.solodit-accent {
+  background: linear-gradient(135deg, #B692F6 0%, #9E77ED 50%, #7F56D9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   ANIMATED GRADIENTS
+   ======================================== */
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero section gradient animation */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(21, 94, 239, 0.1),
+    rgba(41, 112, 255, 0.1),
+    rgba(0, 78, 235, 0.1)
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* ========================================
+   GLOW EFFECTS (with product theming)
+   ======================================== */
+
+/* Primary button glow - Default */
+button[class*="primary"],
+a[class*="primary"] {
+  box-shadow: 0 0 20px rgba(21, 94, 239, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+button[class*="primary"]:hover,
+a[class*="primary"]:hover {
+  box-shadow: 0 0 30px rgba(21, 94, 239, 0.5) !important;
+}
+
+.dark button[class*="primary"],
+.dark a[class*="primary"] {
+  box-shadow: 0 0 25px rgba(41, 112, 255, 0.4) !important;
+}
+
+.dark button[class*="primary"]:hover,
+.dark a[class*="primary"]:hover {
+  box-shadow: 0 0 40px rgba(41, 112, 255, 0.6) !important;
+}
+
+/* CodeHawks button glow */
+body[data-path*="codehawks"] button[class*="primary"],
+body[data-path*="codehawks"] a[class*="primary"] {
+  box-shadow: 0 0 20px rgba(255, 68, 5, 0.4) !important;
+}
+
+body[data-path*="codehawks"] button[class*="primary"]:hover,
+body[data-path*="codehawks"] a[class*="primary"]:hover {
+  box-shadow: 0 0 35px rgba(255, 68, 5, 0.6) !important;
+}
+
+/* Updraft button glow */
+body[data-path*="updraft"] button[class*="primary"],
+body[data-path*="updraft"] a[class*="primary"] {
+  box-shadow: 0 0 20px rgba(102, 198, 28, 0.4) !important;
+}
+
+body[data-path*="updraft"] button[class*="primary"]:hover,
+body[data-path*="updraft"] a[class*="primary"]:hover {
+  box-shadow: 0 0 35px rgba(102, 198, 28, 0.6) !important;
+}
+
+/* Solodit button glow */
+body[data-path*="solodit"] button[class*="primary"],
+body[data-path*="solodit"] a[class*="primary"] {
+  box-shadow: 0 0 20px rgba(158, 119, 237, 0.4) !important;
+}
+
+body[data-path*="solodit"] button[class*="primary"]:hover,
+body[data-path*="solodit"] a[class*="primary"]:hover {
+  box-shadow: 0 0 35px rgba(158, 119, 237, 0.6) !important;
+}
+
+/* ========================================
+   CODE BLOCKS (with product theming)
+   ======================================== */
+
+/* Enhanced code block styling */
+pre {
+  background: rgba(21, 94, 239, 0.03) !important;
+  border: 1px solid rgba(21, 94, 239, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(21, 94, 239, 0.05) !important;
+}
+
+.dark pre {
+  background: rgba(21, 94, 239, 0.05) !important;
+  border: 1px solid rgba(41, 112, 255, 0.15) !important;
+  box-shadow: 0 4px 16px rgba(41, 112, 255, 0.1) !important;
+}
+
+/* Product-specific code blocks */
+body[data-path*="codehawks"] pre {
+  background: rgba(255, 68, 5, 0.03) !important;
+  border: 1px solid rgba(255, 68, 5, 0.15) !important;
+  box-shadow: 0 4px 16px rgba(255, 68, 5, 0.08) !important;
+}
+
+body[data-path*="updraft"] pre {
+  background: rgba(102, 198, 28, 0.03) !important;
+  border: 1px solid rgba(102, 198, 28, 0.15) !important;
+  box-shadow: 0 4px 16px rgba(102, 198, 28, 0.08) !important;
+}
+
+body[data-path*="solodit"] pre {
+  background: rgba(158, 119, 237, 0.03) !important;
+  border: 1px solid rgba(158, 119, 237, 0.15) !important;
+  box-shadow: 0 4px 16px rgba(158, 119, 237, 0.08) !important;
+}
+
+/* Inline code */
+code:not(pre code) {
+  background: rgba(21, 94, 239, 0.08) !important;
+  border: 1px solid rgba(21, 94, 239, 0.15) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  color: #155EEF !important;
+}
+
+.dark code:not(pre code) {
+  background: rgba(41, 112, 255, 0.15) !important;
+  border: 1px solid rgba(41, 112, 255, 0.25) !important;
+  color: #528BFF !important;
+}
+
+/* ========================================
+   NAVIGATION (with product theming)
+   ======================================== */
+
+/* Sidebar glassmorphism */
+aside,
+nav {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Active nav item glow - Default (Profiles/Home) */
+nav a[aria-current="page"],
+nav a.active {
+  background: linear-gradient(90deg, rgba(21, 94, 239, 0.15), transparent) !important;
+  border-left: 3px solid #155EEF !important;
+  box-shadow: 0 0 15px rgba(21, 94, 239, 0.2) !important;
+}
+
+/* CodeHawks section nav */
+body[data-path*="codehawks"] nav a[aria-current="page"],
+body[data-path*="codehawks"] nav a.active {
+  background: linear-gradient(90deg, rgba(255, 68, 5, 0.15), transparent) !important;
+  border-left: 3px solid #FF4405 !important;
+  box-shadow: 0 0 15px rgba(255, 68, 5, 0.3) !important;
+}
+
+/* Updraft section nav */
+body[data-path*="updraft"] nav a[aria-current="page"],
+body[data-path*="updraft"] nav a.active {
+  background: linear-gradient(90deg, rgba(102, 198, 28, 0.15), transparent) !important;
+  border-left: 3px solid #66C61C !important;
+  box-shadow: 0 0 15px rgba(102, 198, 28, 0.3) !important;
+}
+
+/* Solodit section nav */
+body[data-path*="solodit"] nav a[aria-current="page"],
+body[data-path*="solodit"] nav a.active {
+  background: linear-gradient(90deg, rgba(158, 119, 237, 0.15), transparent) !important;
+  border-left: 3px solid #9E77ED !important;
+  box-shadow: 0 0 15px rgba(158, 119, 237, 0.3) !important;
+}
+
+/* ========================================
+   CUSTOM COMPONENTS
+   ======================================== */
+
+/* Note/Warning/Info boxes with glow */
+.note,
+.warning,
+.info,
+[class*="callout"] {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(21, 94, 239, 0.1) !important;
+}
+
+/* Accordion glow on open */
+details[open] {
+  box-shadow: 0 0 20px rgba(21, 94, 239, 0.15) !important;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2970FF, #155EEF);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #528BFF, #2970FF);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2970FF, #004EEB);
+}
+
+/* ========================================
+   BACKGROUND PATTERNS (SUBTLE)
+   ======================================== */
+
+body {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(21, 94, 239, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(41, 112, 255, 0.05) 0px, transparent 50%);
+}
+
+.dark body {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(21, 94, 239, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(41, 112, 255, 0.08) 0px, transparent 50%);
+}
+
+/* ========================================
+   PRODUCT-SPECIFIC THEMING
+   ======================================== */
+
+/* CodeHawks - Orange Theme (URL-based) */
+body[data-path*="codehawks"] .card,
+[href*="/codehawks"] .card {
+  background: rgba(255, 68, 5, 0.05) !important;
+  border-color: rgba(255, 68, 5, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(255, 68, 5, 0.15) !important;
+}
+
+body[data-path*="codehawks"] .card:hover,
+[href*="/codehawks"] .card:hover {
+  background: rgba(255, 68, 5, 0.08) !important;
+  border-color: rgba(255, 68, 5, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(255, 68, 5, 0.25) !important;
+}
+
+body[data-path*="codehawks"] h1 {
+  background: linear-gradient(135deg, #FF692E 0%, #FF4405 50%, #E62E05 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Updraft - Green Theme */
+body[data-path*="updraft"] .card,
+[href*="/updraft"] .card {
+  background: rgba(102, 198, 28, 0.05) !important;
+  border-color: rgba(102, 198, 28, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(102, 198, 28, 0.15) !important;
+}
+
+body[data-path*="updraft"] .card:hover,
+[href*="/updraft"] .card:hover {
+  background: rgba(102, 198, 28, 0.08) !important;
+  border-color: rgba(102, 198, 28, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(102, 198, 28, 0.25) !important;
+}
+
+body[data-path*="updraft"] h1 {
+  background: linear-gradient(135deg, #85E13A 0%, #66C61C 50%, #4CA30D 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Solodit - Purple Theme */
+body[data-path*="solodit"] .card,
+[href*="/solodit"] .card {
+  background: rgba(158, 119, 237, 0.05) !important;
+  border-color: rgba(158, 119, 237, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(158, 119, 237, 0.15) !important;
+}
+
+body[data-path*="solodit"] .card:hover,
+[href*="/solodit"] .card:hover {
+  background: rgba(158, 119, 237, 0.08) !important;
+  border-color: rgba(158, 119, 237, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(158, 119, 237, 0.25) !important;
+}
+
+body[data-path*="solodit"] h1 {
+  background: linear-gradient(135deg, #B692F6 0%, #9E77ED 50%, #7F56D9 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Float animation for hero elements */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.glass {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(21, 94, 239, 0.3) !important;
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px rgba(255, 68, 5, 0.3) !important;
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(102, 198, 28, 0.3) !important;
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(158, 119, 237, 0.3) !important;
+}
