@@ -1,0 +1,29 @@
+# What is an Exam Voucher?
+
+## Article Overview
+
+**Title:** What is an Exam Voucher?
+
+**Last Updated:** Over a year ago
+
+---
+
+## Content
+
+An exam voucher functions as "a unique code that allows you to schedule your certification exam." When you buy a certification while logged into your Cyfrin account, the voucher is automatically placed in your profile for convenient redemption.
+
+### How to Purchase an Exam Voucher
+
+1. Navigate to https://updraft.cyfrin.io/certifications
+2. Choose your desired certification program
+3. Complete the purchase transaction, and your voucher becomes available immediately
+
+---
+
+## Related Resources
+
+- What is a Cyfrin Updraft Certification Study Guide?
+- How to Purchase a Cyfrin Certification
+- How to Retake a Certification Exam
+- How to Download the Cyfrin Updraft Study Guide
+- Professional Certifications vs. Certificates of Completion

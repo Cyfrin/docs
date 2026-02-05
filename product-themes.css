@@ -61,7 +61,7 @@ body.product-solodit [class*="nav"] a[data-active="true"] {
   color: #9E77ED !important;
 }
 
-/* Battlechain Navigation - Blue */
+/* Battlechain Navigation - White/Silver */
 body.product-battlechain nav a[aria-current="page"],
 body.product-battlechain nav a[data-active="true"],
 body.product-battlechain nav a.active,
@@ -74,10 +74,10 @@ body.product-battlechain [class*="sidebar"] a[aria-current="page"],
 body.product-battlechain [class*="sidebar"] a[data-active="true"],
 body.product-battlechain [class*="nav"] a[aria-current="page"],
 body.product-battlechain [class*="nav"] a[data-active="true"] {
-  background: linear-gradient(90deg, rgba(21, 94, 239, 0.15), transparent) !important;
-  border-left: 3px solid #155EEF !important;
-  box-shadow: 0 0 15px rgba(21, 94, 239, 0.3) !important;
-  color: #155EEF !important;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), transparent) !important;
+  border-left: 3px solid #FFFFFF !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3) !important;
+  color: #FFFFFF !important;
 }
 
 /* Profiles Navigation - Blue (default) */
@@ -124,11 +124,14 @@ body.product-solodit main h1 {
   color: #6941C6 !important;
 }
 
-/* Battlechain pages - Blue titles */
+/* Battlechain pages - White/Silver titles */
 body.product-battlechain h1,
 body.product-battlechain article h1,
-body.product-battlechain main h1 {
-  color: #004EEB !important;
+body.product-battlechain main h1,
+body.product-battlechain [class*="title"],
+body.product-battlechain header h1 {
+  color: #FFFFFF !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
 }
 
 /* Profiles pages - Blue titles */
@@ -217,26 +220,27 @@ body.product-profiles main h1 {
   background-clip: text !important;
 }
 
-/* Battlechain Blue Theme */
+/* Battlechain White/Silver Theme */
 .product-battlechain .card {
-  background: rgba(21, 94, 239, 0.05) !important;
-  border-color: rgba(21, 94, 239, 0.2) !important;
-  box-shadow: 0 4px 20px rgba(21, 94, 239, 0.15) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15) !important;
 }
 
 .product-battlechain .card:hover {
-  background: rgba(21, 94, 239, 0.08) !important;
-  border-color: rgba(21, 94, 239, 0.3) !important;
-  box-shadow: 0 8px 32px rgba(21, 94, 239, 0.25) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.25) !important;
   transform: translateY(-2px) !important;
 }
 
 .product-battlechain h1 {
-  color: #004EEB !important;
+  color: #FFFFFF !important;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
 }
 
 .product-battlechain h2 {
-  background: linear-gradient(135deg, #2970FF 0%, #155EEF 50%, #004EEB 100%) !important;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E8E8E8 50%, #D0D0D0 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;

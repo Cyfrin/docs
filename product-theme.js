@@ -16,8 +16,8 @@ const PRODUCT_COLORS = {
     class: 'product-solodit'
   },
   battlechain: {
-    primary: '#155EEF',
-    rgb: '21, 94, 239',
+    primary: '#FFFFFF',
+    rgb: '255, 255, 255',
     class: 'product-battlechain'
   },
   profiles: {
